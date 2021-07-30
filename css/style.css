@@ -1,0 +1,704 @@
+/*
+===============================================
+              General rules
+================================================              
+*/
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans';
+}
+
+
+/*
+========================================
+         NAVBAR
+========================================
+*/
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.navbar {
+    background-color: white;
+    padding: 20px 0;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid black;
+}
+
+.navbar .logo {
+    width: 50%;
+    float: left;
+}
+
+.navbar .logo-text {
+    font-weight: bold;
+    font-size: 30px;
+    user-select: none;
+}
+
+.navbar input,
+.navbar label {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+}
+
+.navbar input {
+    display: none;
+}
+
+.navbar input:checked~.ul-list {
+    display: block;
+}
+
+.navbar label {
+    display: block;
+    height: 15px;
+    width: 20px;
+    background: url(/images/Navbar/open.png) no-repeat;
+    padding: 20px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.navbar input:checked~label {
+    background: url(/images/Navbar/close.png) no-repeat;
+    background-size: cover;
+}
+
+.navbar .ul-list {
+    width: 50%;
+    float: left;
+    list-style: none;
+}
+
+.navbar .ul-list .list-item {
+    display: inline-block;
+}
+
+.navbar .ul-list .list-item a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    user-select: none;
+    border: 0;
+}
+
+.navbar .ul-list .list-item a:hover {
+    background-color: #222;
+    color: white;
+    border-radius: 5px;
+}
+
+
+/* medai query for Nanbar */
+
+@media(min-width:992px) {
+    .navbar label {
+        display: none;
+    }
+}
+
+@media(max-width:991px) {
+    .navbar .logo {
+        width: 100%;
+        float: none;
+    }
+    .navbar .ul-list {
+        width: 100%;
+        float: none;
+        margin-top: 20px;
+        display: none;
+    }
+    .navbar .ul-list .list-item {
+        display: block;
+        text-align: center;
+    }
+}
+
+
+/*
+================================
+         HOME STYLES
+================================         
+*/
+
+.home {
+    height: 500px;
+    background-image: url(/images/Home/home-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+}
+
+.home .home-information {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home .home-information .home-title {
+    font-size: 60px;
+    border-bottom: 20px;
+    color: #5e5e5e;
+    font-weight: bold;
+}
+
+.home .home-information .home-subtitle {
+    font-size: 30px;
+    color: #eb5424;
+    margin-bottom: 20px;
+}
+
+.home .home-information .home-desc {
+    line-height: 2;
+    color: #888;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.home .home-information .home-desc span {
+    color: black;
+}
+
+.home .home-information .home-btn {
+    background-color: #eb5424;
+    width: 150px;
+    color: white;
+    padding: 15px;
+    border: 0;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.home .home-information .home-btn:hover {
+    background-color: white;
+    color: #eb5424;
+}
+
+
+/*
+=====================================
+     media query for Home
+=====================================
+*/
+
+@media (max-width:768px) {
+    .home {
+        width: 100%;
+    }
+    .home .home-information .home-title {
+        font-size: 40px;
+    }
+    .home .home-information .home-subtitle {
+        font-size: 20px;
+    }
+    .home .home-information .home-desc {
+        font-size: 12px;
+    }
+}
+
+
+/*
+=====================================
+      work styles
+=====================================
+*/
+
+.work {
+    background-color: white;
+    height: auto;
+    padding: 50px 0;
+}
+
+.work .work-title {
+    font-size: 50px;
+}
+
+.work .work-title span {
+    font-weight: normal;
+}
+
+.work .part {
+    width: 30%;
+    height: auto;
+    border: 1px solid silver;
+    padding: 100px 0;
+    text-align: center;
+    float: left;
+    margin-top: 20px;
+    margin-left: 5%;
+}
+
+.work .normal {
+    margin-left: 0;
+}
+
+.work .part .icon {
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.work .part .part-title {
+    color: #eb5424;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.work .part .line {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.work .part .part-desc {
+    color: #888;
+    padding: 20px;
+}
+
+@media(max-width:768px) {
+    .work .part {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+    }
+}
+
+
+/*
+=====================================
+      portfolio styles
+=====================================
+*/
+
+.clear {
+    clear: both;
+}
+
+.portfolio {
+    background-color: #f8f8f8;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.portfolio .portfolio-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.portfolio .portfolio-title span {
+    font-weight: normal;
+}
+
+.portfolio .portfolio-list {
+    list-style: none;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.portfolio .portfolio-list .portfolio-item {
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+}
+
+.portfolio .portfolio-list .active {
+    background-color: #eb5424;
+    color: white;
+}
+
+.box div {
+    width: 25%;
+    float: left;
+    font-size: 0;
+    position: relative;
+}
+
+.box div img {
+    width: 100%;
+}
+
+.box div .overlay {
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(235, 84, 36, 0.5);
+    opacity: 0;
+}
+
+.box div .overlay span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #eb5424;
+    cursor: pointer;
+    display: block;
+    width: 30%;
+    text-align: center;
+}
+
+.box div:hover .overlay {
+    opacity: 1;
+}
+
+@media(max-width:768px) {
+    .box div {
+        width: 50%;
+    }
+}
+
+@media(max-width:576px) {
+    .portfolio .portfolio-list .portfolio-item {
+        display: block;
+        margin: auto;
+    }
+    .box div {
+        width: 100%;
+    }
+}
+
+
+/*
+=====================================
+      profile + sills styles
+=====================================
+*/
+
+.profile-skills {
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.profile-skills .profile {
+    width: 50%;
+    float: left;
+}
+
+.profile-skills .skills {
+    width: 50%;
+    float: left;
+}
+
+.profile-skills .skills .skills-desc {
+    font-size: 15px;
+    color: #888;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.profile-skills .skills .bar {
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.profile-skills .skills .bar .bar-title {
+    float: left;
+}
+
+.profile-skills .skills .bar .perc {
+    float: right;
+    margin-right: 100px;
+}
+
+.profile-skills .skills .bar .parent {
+    height: 2px;
+    background-color: #f8f8f8;
+    clear: both;
+    position: relative;
+    top: 5px;
+}
+
+.profile-skills .skills .bar .parent span {
+    display: block;
+    background-color: #eb5424;
+    height: 1px;
+}
+
+.profile-skills .skills .bar .parent span.sp1 {
+    width: 100%;
+}
+
+.profile-skills .skills .bar .parent span.sp2 {
+    width: 90%;
+}
+
+.profile-skills .skills .bar .parent span.sp3 {
+    width: 80%;
+}
+
+.profile-skills .profile .profile-title,
+.profile-skills .skills .skills-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.profile-skills .profile .profile-title span,
+.profile-skills .skills .skills-title span {
+    font-weight: normal;
+}
+
+.profile-skills .profile .profile-item span {
+    width: 100px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.profile-skills .profile .profile-item span.web {
+    color: #eb5424;
+    font-weight: normal;
+}
+
+.profile-skills .profile .profile-list {
+    list-style: none;
+}
+
+@media(max-width:575px) {
+    .profile-skills .profile {
+        margin-bottom: 30px;
+    }
+    .profile-skills .profile,
+    .profile-skills .skills {
+        width: 100%;
+        float: none;
+    }
+}
+
+
+/*
+=====================================
+      creative styles
+=====================================
+*/
+
+.creative {
+    height: 500px;
+    background: url(/images/creative/about-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.creative .creative-info {
+    width: 50%;
+    float: right;
+    padding-top: 100px;
+}
+
+.creative .creative-info .creative-title {
+    font-size: 50px;
+}
+
+.creative .creative-info .creative-title span {
+    font-weight: normal;
+}
+
+.creative .creative-info .creative-subtitle {
+    font-size: 40px;
+    color: #eb5424;
+    margin-bottom: 20px;
+}
+
+.creative .creative-info .creative-desc {
+    color: #000;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.creative .creative-info .creative-desc a {
+    text-decoration: none;
+}
+
+@media (max-width:991px) {
+    .creative {
+        height: auto;
+    }
+    .creative .creative-info {
+        width: 100%;
+        padding: 15px;
+        float: none;
+    }
+    .creative .creative-info .creative-subtitle {
+        font-size: 30px;
+    }
+}
+
+
+/*
+=====================================
+      social styles
+=====================================
+*/
+
+.social-media {
+    height: auto;
+    overflow: hidden;
+}
+
+.social-media .social {
+    width: 33.33%;
+    float: left;
+    padding: 100px 0 100px 60px;
+}
+
+.social-media .social.face {
+    background-color: #3b5998;
+}
+
+.social-media .social.twitter {
+    background-color: #498cbf;
+}
+
+.social-media .social.pin {
+    background-color: #cc2121;
+}
+
+.social-media .social .icon {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    margin-right: 10px;
+    color: #888;
+}
+
+.social-media .social p {
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.social-media .social span {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.social-media .social span.info2 {
+    font-weight: normal;
+}
+
+@media(max-width:991px) {
+    .social-media .social {
+        width: 100%;
+        float: none;
+    }
+}
+
+
+/*
+=====================================
+      drop styles
+=====================================
+*/
+
+.drop {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.drop .drop-title {
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+.drop .drop-title span {
+    font-weight: normal;
+}
+
+.drop form {
+    width: 70%;
+    margin: auto;
+}
+
+.drop form input {
+    margin-bottom: 10px;
+    padding: 5px;
+    outline: 0;
+}
+
+.drop form .form-input input {
+    width: 49%;
+    overflow: hidden;
+}
+
+.drop form .form-input input[type=text] {
+    float: left;
+}
+
+.drop form .form-input input[type=email] {
+    float: right;
+}
+
+.drop form .form-sub {
+    width: 100%;
+}
+
+.drop form .text {
+    width: 100%;
+    background-color: #ccc;
+    outline: 0;
+}
+
+.drop form input[type=submit] {
+    width: 60%;
+    background-color: white;
+    color: #888;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+@media(max-width:575px) {
+    .drop .drop-title {
+        font-size: 30px;
+    }
+    .drop form .form-input input {
+        width: 100%;
+        float: none;
+    }
+    .drop form {
+        width: 80%;
+    }
+}
+
+
+/*
+================================
+         footer STYLES
+================================         
+*/
+
+.footer {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.footer p {
+    color: #888;
+}
