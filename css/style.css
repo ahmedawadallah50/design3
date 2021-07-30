@@ -66,14 +66,14 @@ body {
     display: block;
     height: 15px;
     width: 20px;
-    background: url(/images/Navbar/open.png) no-repeat;
+    background: url(../images/Navbar/open.png) no-repeat;
     padding: 20px;
     background-size: cover;
     cursor: pointer;
 }
 
 .navbar input:checked~label {
-    background: url(/images/Navbar/close.png) no-repeat;
+    background: url(../images/Navbar/close.png) no-repeat;
     background-size: cover;
 }
 
@@ -138,7 +138,7 @@ body {
 
 .home {
     height: 500px;
-    background-image: url(/images/Home/home-bg.jpg);
+    background-image: url(../images/Home/home-bg.jpg);
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -497,7 +497,7 @@ body {
 
 .creative {
     height: 500px;
-    background: url(/images/creative/about-bg.jpg);
+    background: url(../images/creative/about-bg.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
